@@ -1,4 +1,6 @@
+@use "./variables";
+
 body {
-  background-color: $bg-color;
-  font-family: $syne-font;
+  background-color: variables.$bg-color;
+  font-family: variables.$syne-font;
 }
