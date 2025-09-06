@@ -1,6 +1,8 @@
-@use "./variables";
+@use './variables' as *;
+@use './utils/mixins' as *;
 
 body {
-  background-color: variables.$bg-color;
-  font-family: variables.$syne-font;
+  background-color: $bg-color;
+  font-family: $syne-font;
+  @include mainTitles(5rem);
 }

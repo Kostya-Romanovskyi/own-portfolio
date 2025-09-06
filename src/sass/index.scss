@@ -1,4 +1,4 @@
-@use "./variables";
-@use "./normalize";
-@use "./general";
-@use "./utils";
+@use './variables' as *;
+@use './normalize' as *;
+@use './utils/mixins' as *;
+@use './general' as *;
