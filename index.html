@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="isOpen">
   <head>
     <meta charset="UTF-8" />
 
@@ -21,8 +21,47 @@
     <title>ownPortfolio</title>
   </head>
   <body>
-    <h1>Hello world</h1>
-    <p>Header will be the next</p>
+    <div class="wrapper">
+      <header class="header">
+        <div class="container">
+          <div class="header__desktop__wrapper">
+            <!-- logo -->
+            <div class="header__logo">
+              <img src="" alt="Logo" />
+            </div>
+            <!-- navigation block -->
+            <div class="header__mobile__wrapper">
+              <nav class="header__nav">
+                <!-- nav list -->
+                <ul class="header__nav__list">
+                  <li class="header__nav__item">
+                    <a href="" class="header__nav__link">home</a>
+                  </li>
+                  <li class="header__nav__item">
+                    <a href="" class="header__nav__link">about me</a>
+                  </li>
+                  <li class="header__nav__item">
+                    <a href="" class="header__nav__link">my works</a>
+                  </li>
+                </ul>
+              </nav>
+
+              <div class="header__contacts">
+                <button type="button">contacts</button>
+              </div>
+            </div>
+            <!-- burger btn (open menu) -->
+            <button type="button" class="header__burger__btn">
+              <span></span>
+            </button>
+          </div>
+        </div>
+      </header>
+
+      <main class="main">main</main>
+      <footer class="footer">footer</footer>
+    </div>
+
     <script type="module" src="./src/main.ts"></script>
   </body>
 </html>

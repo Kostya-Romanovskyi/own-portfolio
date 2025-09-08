@@ -1,188 +1,222 @@
-/*! modern-normalize v3.0.1 | MIT License | https://github.com/sindresorhus/modern-normalize */
-/*
-Document
-========
-*/
-/**
-Use a better box model (opinionated).
-*/
+/* 1. Use a more-intuitive box-sizing model */
 *,
-::before,
-::after {
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
-html {
-  font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji"; /* 1 */
-  line-height: 1.15; /* 2 */
-  -webkit-text-size-adjust: 100%; /* 3 */
-  -moz-tab-size: 4;
-    -o-tab-size: 4;
-       tab-size: 4; /* 4 */
-}
-
-/*
-Sections
-========
-*/
-/**
-Remove the margin in all browsers.
-*/
-body {
+/* 2. Remove default margin */
+* {
   margin: 0;
 }
 
-/*
-Text-level semantics
-====================
-*/
-/**
-Add the correct font weight in Chrome and Safari.
-*/
-b,
-strong {
-  font-weight: bolder;
+body,
+html {
+  height: 100%;
 }
 
-/**
-1. Improve consistency of default fonts in all browsers. (https://github.com/sindresorhus/modern-normalize/issues/3)
-2. Correct the odd 'em' font sizing in all browsers.
-*/
-code,
-kbd,
-samp,
-pre {
-  font-family: ui-monospace, SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace; /* 1 */
-  font-size: 1em; /* 2 */
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  /* 4. Add accessible line-height */
+  line-height: 1.5;
+  /* 5. Improve text rendering */
+  -webkit-font-smoothing: antialiased;
 }
 
-/**
-Add the correct font size in all browsers.
-*/
-small {
-  font-size: 80%;
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
 }
 
-/**
-Prevent 'sub' and 'sup' elements from affecting the line height in all browsers.
-*/
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-sup {
-  top: -0.5em;
-}
-
-/*
-Tabular data
-============
-*/
-/**
-Correct table border color inheritance in Chrome and Safari. (https://issues.chromium.org/issues/40615503, https://bugs.webkit.org/show_bug.cgi?id=195016)
-*/
-table {
-  border-color: currentcolor;
-}
-
-/*
-Forms
-=====
-*/
-/**
-1. Change the font styles in all browsers.
-2. Remove the margin in Firefox and Safari.
-*/
-button,
+/* 7. Inherit fonts for form controls */
 input,
-optgroup,
-select,
-textarea {
-  font-family: inherit; /* 1 */
-  font-size: 100%; /* 1 */
-  line-height: 1.15; /* 1 */
-  margin: 0; /* 2 */
-}
-
-/**
-Correct the inability to style clickable types in iOS and Safari.
-*/
 button,
-[type=button],
-[type=reset],
-[type=submit] {
-  -webkit-appearance: button;
+textarea,
+select {
+  font: inherit;
 }
 
-/**
-Remove the padding so developers are not caught out when they zero out 'fieldset' elements in all browsers.
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+/*
+  10. Create a root stacking context
 */
-legend {
+#root,
+#__next {
+  isolation: isolate;
+}
+
+ul,
+li {
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
-/**
-Add the correct vertical alignment in Chrome and Firefox.
-*/
-progress {
-  vertical-align: baseline;
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
 }
 
-/**
-Correct the cursor style of increment and decrement buttons in Safari.
-*/
-::-webkit-inner-spin-button,
-::-webkit-outer-spin-button {
-  height: auto;
-}
-
-/**
-1. Correct the odd appearance in Chrome and Safari.
-2. Correct the outline style in Safari.
-*/
-[type=search] {
-  -webkit-appearance: textfield; /* 1 */
-  outline-offset: -2px; /* 2 */
-}
-
-/**
-Remove the inner padding in Chrome and Safari on macOS.
-*/
-::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-/**
-1. Correct the inability to style clickable types in iOS and Safari.
-2. Change font properties to 'inherit' in Safari.
-*/
-::-webkit-file-upload-button {
-  -webkit-appearance: button; /* 1 */
-  font: inherit; /* 2 */
-}
-
-/*
-Interactive
-===========
-*/
-/*
-Add the correct display in Chrome and Safari.
-*/
-summary {
-  display: list-item;
+html {
+  overflow: hidden;
 }
 
 body {
   background-color: #1a1a1a;
-  font-family: "Syne", sans-serif;
-  font-family: "Syne", sans-serif;
-  font-size: 5rem;
+  font-family: "Rubik", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 10px;
+}
+@media (min-width: 320px) {
+  .container {
+    max-width: 320px;
+    padding: 0 10px;
+  }
+}
+@media (min-width: 480px) {
+  .container {
+    max-width: 480px;
+    padding: 0 10px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+}
+@media (min-width: 1150px) {
+  .container {
+    max-width: 1150px;
+    padding: 0 20px;
+  }
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+.header {
+  position: relative;
+  padding-top: 20px;
+}
+
+.header__desktop__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 10px;
+}
+
+.header__mobile__wrapper {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 60%;
+  height: 100vh;
+  border-left: 1px solid #606060;
+  background-color: #1a1a1a;
+  transform: translateX(100%);
+  transition: transform 1000ms;
+}
+.isOpen .header__mobile__wrapper {
+  transform: translateX(0);
+}
+
+.header__nav__link {
+  font-family: "Rubik", sans-serif;
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.header__nav__link:active, .header__nav__link:focus {
+  color: #ffffff;
+}
+.header__nav__link .header__nav__item:active, .header__nav__item:focus .header__nav__link {
+  color: #ffffff;
+}
+
+.header__burger__btn {
+  position: relative;
+  width: 35px;
+  height: 24px;
+}
+.header__burger__btn::before, .header__burger__btn:after, .header__burger__btn > span {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: all 1000ms;
+}
+.header__burger__btn::before {
+  content: "";
+  top: 0;
+}
+.header__burger__btn::after {
+  content: "";
+  bottom: 0;
+}
+.header__burger__btn > span {
+  top: 50%;
+  transform: translateY(-0.5px);
+}
+.isOpen .header__burger__btn::before {
+  top: 50%;
+  transform: translateY(-50%) rotate(45deg);
+}
+.isOpen .header__burger__btn::after {
+  top: 50%;
+  transform: translateY(-50%) rotate(-45deg);
+}
+.isOpen .header__burger__btn > span {
+  width: 0%;
 }/*# sourceMappingURL=index.css.map */

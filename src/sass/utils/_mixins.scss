@@ -1,4 +1,18 @@
-@use '../variables' as *;
+@use './variables' as *;
+
+@mixin container($breakpoints, $padding) {
+  @each $screen, $size in $breakpoints {
+    @media (min-width: $size) {
+      max-width: $size;
+
+      @each $screen-pd, $measurement in $padding {
+        @if $screen == $screen-pd {
+          padding: 0 $measurement;
+        }
+      }
+    }
+  }
+}
 
 @mixin mainTitles($font-size) {
   font-family: $syne-font;
@@ -9,4 +23,12 @@
   display: $display;
   align-items: center;
   justify-content: center;
+}
+
+@mixin initStatus($colorMap) {
+  @each $status, $color in $colorMap {
+    .icon-#{$status} {
+      color: $color;
+    }
+  }
 }

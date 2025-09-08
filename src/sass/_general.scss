@@ -1,8 +1,29 @@
-@use './variables' as *;
-@use './utils/mixins' as *;
+@use './all-utils' as *;
+
+html {
+  overflow: hidden;
+}
 
 body {
   background-color: $bg-color;
-  font-family: $syne-font;
-  @include mainTitles(5rem);
+  font-family: $rubik-font;
+
+  overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 10px;
+  @include container($breakpoints, $padding-breakpoints);
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > main {
+  flex-grow: 1;
 }

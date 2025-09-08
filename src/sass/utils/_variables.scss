@@ -1,0 +1,35 @@
+//colors
+$bg-color: #1a1a1a;
+$white-color: #ffffff;
+$white-alpha-color: rgba(255, 255, 255, 0.4);
+$orange-color: #ff9142;
+$primary-grey-color: #a8a8a8;
+$secondary-grey-color: #606060;
+
+// color maps
+$statusColors: (
+  'error': 'red',
+  'success': green,
+  'warning': yellow,
+);
+
+//breakpoints
+$breakpoints: (
+  tiny: 320px,
+  mobile: 480px,
+  tablet: 768px,
+  desktop: 1150px,
+);
+
+$padding-breakpoints: (
+  tiny: 10px,
+  mobile: 10px,
+  tablet: 15px,
+  desktop: 20px,
+);
+
+//fonts
+$inter-font: 'Inter', sans-serif;
+$syne-font: 'Syne', sans-serif;
+$rubik-font: 'Rubik', sans-serif;
+$outfit-font: 'Outfit', sans-serif;
