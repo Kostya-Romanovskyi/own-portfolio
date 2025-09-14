@@ -1,4 +1,5 @@
 @use './variables' as *;
+@use 'sass:map';
 
 @mixin container($breakpoints, $padding) {
   @each $screen, $size in $breakpoints {
@@ -7,10 +8,17 @@
 
       @each $screen-pd, $measurement in $padding {
         @if $screen == $screen-pd {
-          padding: 0 $measurement;
+          padding-inline: $measurement;
         }
       }
     }
+  }
+}
+
+// get different screen sizes
+@mixin getMediaScreenSize($map, $key) {
+  @media (min-width: map.get($map, $key)) {
+    @content;
   }
 }
 

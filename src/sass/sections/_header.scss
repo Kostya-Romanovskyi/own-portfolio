@@ -19,7 +19,7 @@
   position: absolute;
   top: 100%;
   right: 0;
-  width: 60%;
+  width: 100%;
   height: 100vh;
   border-left: 1px solid $secondary-grey-color;
   background-color: $bg-color;
@@ -34,14 +34,33 @@
 
 .header__nav {
 }
+
 .header__nav__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  //mobile counter version
+  counter-reset: num;
+
+  margin-bottom: 30px;
 }
+
 .header__nav__item {
 }
+
 .header__nav__link {
+  display: inline-flex;
   font-family: $rubik-font;
-  font-weight: 700;
-  font-size: 0.875rem;
+  font-weight: $font-weight-bold;
+  // font-size: 0.875rem;
+  font-size: 1.25rem;
+
+  //mobile counter version increment
+  counter-increment: num;
+
+  padding-inline: 85px;
+  padding-block: 20px;
 
   color: $white-alpha-color;
   text-transform: uppercase;
@@ -56,9 +75,50 @@
   .header__nav__item:focus & {
     color: $white-color;
   }
+
+  //show mobile counter version
+  &:before {
+    content: counter(num, decimal-leading-zero);
+    margin-right: 10px;
+    color: $orange-color;
+  }
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 1.5rem;
+
+    padding-inline: 160px;
+    padding-block: 30px;
+  }
 }
 
 .header__contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__contacts__button {
+  font-family: $rubik-font;
+  font-size: 1.125rem;
+  font-weight: $font-weight-bold;
+
+  min-width: 171px;
+  min-height: 63px;
+  max-width: 300px;
+
+  padding-inline: 35px;
+  padding-block: 16px;
+
+  margin-inline: 5px;
+
+  border: 2px solid $white-alpha-color;
+  border-radius: 30px;
+
+  color: $white-color;
+
+  text-transform: uppercase;
+  white-space: normal;
+  word-break: break-word;
 }
 
 .header__burger__btn {
