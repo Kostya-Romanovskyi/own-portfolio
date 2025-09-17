@@ -1,14 +1,14 @@
 @use './all-utils' as *;
 
 html {
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body {
   background-color: $bg-color;
   font-family: $rubik-font;
 
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .container {
@@ -26,4 +26,5 @@ body {
 
 .wrapper > main {
   flex-grow: 1;
+  padding-top: 70px;
 }
