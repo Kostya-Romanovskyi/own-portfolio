@@ -24,10 +24,6 @@
   }
 }
 
-p {
-  font-size: 5rem;
-}
-
 .header__logo {
   width: 125px;
   height: 40px;
@@ -42,6 +38,7 @@ p {
   top: 100%;
   right: 0;
   width: 100%;
+  z-index: 1000;
 
   background-color: $bg-color;
 

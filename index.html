@@ -22,6 +22,7 @@
   </head>
   <body>
     <div class="wrapper">
+      <!-- HEADER START -->
       <header class="header">
         <div class="container">
           <div class="header__desktop__wrapper">
@@ -41,7 +42,9 @@
                     <a href="" class="header__nav__link">home</a>
                   </li>
                   <li class="header__nav__item">
-                    <a href="" class="header__nav__link">about me</a>
+                    <a href="#section-about" class="header__nav__link">
+                      about me
+                    </a>
                   </li>
                   <li class="header__nav__item">
                     <a href="" class="header__nav__link">my works</a>
@@ -63,8 +66,67 @@
           </div>
         </div>
       </header>
+      <!-- HEADER END -->
 
-      <main class="main">main</main>
+      <main class="main">
+        <!-- HERO SECTION -->
+        <section class="section hero">
+          <div class="container">
+            <h1 class="hero__title">
+              Junior Front End
+              <span class="text__shadow">Developer</span> with huge ambition
+            </h1>
+
+            <a href="" class="hero__link">
+              explore works
+              <svg class="hero__link__icon">
+                <use href="./src/images/sprite.svg#icon-arrow"></use>
+              </svg>
+            </a>
+          </div>
+        </section>
+        <!-- HERO SECTION END -->
+
+        <!-- ABOUT ME SECTION -->
+        <section class="section about" id="section-about">
+          <div class="container">
+            <div class="about__wrapper">
+              <div class="about__info">
+                <h2 class="about__title">
+                  <span class="text__shadow">Let’s</span> get know about me
+                  closer
+                </h2>
+                <p class="about__subtitle">
+                  Aaronn is a New York-based visual designer focusing on
+                  branding and visual identity. Her portfolio showcases her wide
+                  range of work, spanning books, posters and web design.
+                </p>
+
+                <a href="/" class="about__link">Discover More About Me</a>
+              </div>
+
+              <div class="about__photo__wrapper">
+                <img
+                  class="about__photo"
+                  src="./src/images/sushi_4.png"
+                  alt="My Photo"
+                />
+                <img
+                  class="decoration decoration--left"
+                  src="./src/images/decoration-photo.svg"
+                  alt="decoration"
+                />
+                <img
+                  class="decoration decoration--right"
+                  src="./src/images/decoration-photo.svg"
+                  alt="decoration"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- ABOUT ME SECTION END -->
+      </main>
       <footer class="footer">footer</footer>
     </div>
 

@@ -2,11 +2,15 @@
 
 html {
   overflow-x: hidden;
+
+  scroll-behavior: smooth;
 }
 
 body {
-  background-color: $bg-color;
   font-family: $rubik-font;
+
+  color: $white-color;
+  background-color: $bg-color;
 
   overflow-x: hidden;
 }
@@ -27,4 +31,20 @@ body {
 .wrapper > main {
   flex-grow: 1;
   padding-top: 70px;
+}
+
+.section {
+  padding-block: 30px;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    padding-block: 50px;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    padding-block: 60px;
+  }
+}
+
+.text__shadow {
+  text-shadow: 1px 1px 70px;
 }

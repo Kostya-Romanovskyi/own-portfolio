@@ -1,0 +1,52 @@
+@use './variables' as *;
+@use './mixins' as *;
+
+%mainLinkButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: $rubik-font;
+  font-size: 0.8125rem;
+  font-weight: $font-weight-bold;
+  letter-spacing: 1.63px;
+
+  min-width: 142px;
+
+  padding-block: 19px;
+  padding-inline: 31px;
+
+  border: 1px solid transparent;
+  border-radius: 32.5px;
+
+  text-decoration: none;
+  text-transform: uppercase;
+
+  color: $white-color;
+
+  transition: background-color $hover-time;
+
+  &:active,
+  &:focus {
+    background-color: transparent;
+    border: 1px solid $white-alpha-color;
+  }
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    min-width: 200px;
+
+    padding-block: 24px;
+    padding-inline: 37px;
+  }
+  @include getMediaScreenSize($breakpoints, desktop) {
+    min-width: 242px;
+
+    padding-block: 29px;
+    padding-inline: 41px;
+
+    &:hover {
+      background-color: transparent;
+      border: 1px solid $white-alpha-color;
+    }
+  }
+}
