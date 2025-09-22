@@ -1,0 +1,57 @@
+@use '../all-utils' as *;
+
+.certificates {
+}
+
+.certificates__wrapper {
+  display: flex;
+
+  justify-content: space-between;
+}
+.certificates__title {
+  @extend %mainTitles;
+}
+.certificates__icon {
+  width: 30px;
+  height: 30px;
+
+  fill: $orange-color;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    width: 60px;
+    height: 60px;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    width: 90px;
+    height: 90px;
+  }
+}
+.certificates__list {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.certificates__item {
+  transition: transform $hover-time;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    //calc((100% - indent * (items - 1)) / items);
+    flex-basis: calc((100% - 30px * (2 - 1)) / 2);
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    flex-basis: calc((100% - 30px * (4 - 1)) / 4);
+
+    &:hover,
+    &:focus {
+      transform: scale(1.03);
+    }
+  }
+}
+.certificates__link {
+}
+.certificates__image {
+}

@@ -22,11 +22,6 @@
   }
 }
 
-@mixin mainTitles($font-size) {
-  font-family: $syne-font;
-  font-size: $font-size;
-}
-
 @mixin centeredLayout($display) {
   display: $display;
   align-items: center;

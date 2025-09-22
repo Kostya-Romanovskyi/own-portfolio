@@ -1,0 +1,170 @@
+@use '../all-utils' as *;
+
+.projects {
+  text-align: center;
+}
+
+.projects__title {
+  @extend %mainTitles;
+  text-align: center;
+}
+
+.projects__link__button {
+  @extend %mainLinkButton;
+
+  margin-bottom: 30px;
+  border: 1px solid $orange-color;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    margin-bottom: 40px;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    margin-bottom: 50px;
+
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+}
+
+.projects__link__button__icon {
+  width: 16px;
+  height: 10px;
+
+  margin-left: 10px;
+}
+
+.projects__list {
+  @include getMediaScreenSize($breakpoints, tablet) {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+  }
+}
+
+.projects__item {
+  text-align: start;
+
+  &:not(:last-child) {
+    margin-bottom: 40px;
+  }
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    //calc((100% - indent * (items - 1)) / items);
+    flex-basis: calc((100% - 30px * (2 - 1)) / 2);
+  }
+}
+
+.projects__link {
+  text-decoration: none;
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    &:hover .projects__image {
+      transform: scale(0.99);
+    }
+
+    &:hover .projects__image__wrapper::after {
+      opacity: 1;
+    }
+  }
+}
+
+.projects__image__wrapper::after {
+  @include getMediaScreenSize($breakpoints, desktop) {
+    content: '';
+    position: absolute;
+    inset: 0;
+
+    border-radius: 16px;
+
+    background-color: $white-hover-color;
+    opacity: 0;
+
+    transition: opacity $hover-time;
+  }
+}
+
+.projects__image__wrapper {
+  position: relative;
+  z-index: -1;
+}
+
+.projects__image {
+  border-radius: 16px;
+  margin-bottom: 20px;
+  transition: transform $hover-time;
+}
+
+.projects__subtitle {
+  position: relative;
+  z-index: -1;
+
+  font-family: $syne-font;
+  font-size: 1.0625rem;
+  font-weight: $font-weight-bold;
+
+  margin-bottom: 20px;
+
+  color: $white-color;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: -5px;
+    width: 20px;
+    height: 1px;
+
+    background-color: $orange-color;
+  }
+
+  @include getMediaScreenSize($breakpoints, mobile) {
+    &::after {
+      right: 50px;
+      width: 80px;
+    }
+  }
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 18px;
+
+    &::after {
+      right: 25px;
+      width: 25px;
+    }
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    font-size: 20px;
+
+    &::after {
+      right: 100px;
+      width: 80px;
+    }
+  }
+}
+
+.projects__info__wrapper {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+}
+
+.projects__info {
+  font-family: $rubik-font;
+  font-size: 0.875rem;
+  font-weight: $font-weight-regular;
+
+  color: $secondary-grey-color;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 1rem;
+  }
+}
+.projects__info--light {
+  color: $white-color;
+}

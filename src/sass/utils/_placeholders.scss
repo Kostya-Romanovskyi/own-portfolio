@@ -1,6 +1,7 @@
 @use './variables' as *;
 @use './mixins' as *;
 
+// Link button
 %mainLinkButton {
   display: inline-flex;
   justify-content: center;
@@ -48,5 +49,24 @@
       background-color: transparent;
       border: 1px solid $white-alpha-color;
     }
+  }
+}
+
+// Main Titles
+%mainTitles {
+  font-family: $syne-font;
+  font-size: 1.5625rem;
+  font-weight: $font-weight-bold;
+
+  margin-bottom: 20px;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    margin-bottom: 30px;
+    font-size: 2.1875rem;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    margin-bottom: 40px;
+    font-size: 3.5rem;
   }
 }
