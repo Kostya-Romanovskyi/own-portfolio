@@ -1,6 +1,16 @@
+// Styles for home page
 @use './general';
 @use './sections/header';
 @use './sections/hero';
 @use './sections/about';
 @use './sections/projects';
 @use './sections/certificates';
+@use './sections/contact-me';
+@use './sections/footer';
+// Styles for home page END
+
+// Styles for my works page
+@use './works/works';
+
+// Styles for my projects
+@use './project-detail/project-detail';

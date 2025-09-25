@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="../src/images/favicon.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&family=Outfit&family=Rubik:wght@400..900&family=Syne:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- styles -->
+    <link rel="stylesheet" href="../src/css/index.min.css">
+
+    <title>Web Studio</title>
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="container">
+                <div class="header__desktop__wrapper">
+                    <!-- logo -->
+                    <div class="header__logo">
+                        <a href="/">
+                            <img src="../src/images/logo.webp" alt="Logo">
+                        </a>
+                    </div>
+                    <!-- navigation block -->
+
+                    <div class="header__mobile__wrapper">
+                        <nav class="header__nav">
+                            <!-- nav list -->
+                            <ul class="header__nav__list">
+                                <li class="header__nav__item">
+                                    <a href="/own-portfolio/" class="header__nav__link">home</a>
+                                </li>
+                                <li class="header__nav__item">
+                                    <a href="/own-portfolio/about.html" class="header__nav__link">
+                                        about me
+                                    </a>
+                                </li>
+                                <li class="header__nav__item">
+                                    <a href="/own-portfolio/works.html" class="header__nav__link">my works</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="header__contacts">
+                            <button class="header__contacts__button" type="button">
+                                contacts
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- burger btn (open menu) -->
+                    <button type="button" class="header__burger__btn">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="container">
+                <h1 class="project__detail__title"></h1>
+                <div class="project__detail__descr__wrapper">
+                    <!-- <p class="project__detail__descr">HTML</p>
+                    <p class="project__detail__descr">CSS</p>
+                    <p class="project__detail__descr">JavaScript</p>
+                    <p class="project__detail__descr">SCSS</p> -->
+                </div>
+
+            </div>
+            <!-- PROJECT STORY SECTION -->
+            <section class="section project__story">
+                <div class="container">
+                    <div class="project__story__img__wrapper">
+                        <!-- <img class="project__story__img" src="../src/images/WebStudio/main.jpg"
+                            alt="Project screenshot"> -->
+                    </div>
+
+                    <div class="story story__wrapper">
+
+                        <h2 class="story__title">Project Story</h2>
+                        <!-- <p class="story__description"> <strong>Web Studio</strong> is a personal learning project I
+                            created as a junior
+                            front-end developer.
+                            It is built with <strong>HTML, CSS, SCSS, and JavaScript</strong>, focusing on
+                            <strong>responsive design</strong> so the
+                            website works smoothly on mobile devices, tablets, and desktops.
+                        </p>
+
+                        <p class="story__description">
+                            The concept of the project is to showcase how a modern web development studio might present
+                            its services online.
+                        </p> -->
+
+                    </div>
+                </div>
+            </section>
+            <!-- PROJECT STORY SECTION END-->
+
+
+            <!-- OTHER PROJECTS SECTION -->
+            <section class="section other">
+                <div class="container">
+                    <h2 class="other__title">Other projects</h2>
+
+                    <ul class="other__list">
+                        <!-- <li class="other__item">
+                            <a class="other__link" href="">
+                                <div class="other__img__wrapper">
+                                    <img class="other__img" src="../src/images/WebStudio/3.jpg" alt="">
+                                </div>
+
+
+                                <h3 class="other__subtitle">Logo Project 1</h3>
+                                <p class="other__description">Branding</p>
+                            </a>
+                        </li>
+                        <li class="other__item">
+                            <a class="other__link" href="">
+                                <div class="other__img__wrapper">
+                                    <img class="other__img" src="../src/images/WebStudio/3.jpg" alt="">
+                                </div>
+
+
+                                <h3 class="other__subtitle">Logo Project 1</h3>
+                                <p class="other__description">Branding</p>
+                            </a>
+                        </li>
+                        <li class="other__item">
+                            <a class="other__link" href="">
+                                <div class="other__img__wrapper">
+                                    <img class="other__img" src="../src/images/WebStudio/3.jpg" alt="">
+                                </div>
+
+
+                                <h3 class="other__subtitle">Logo Project 1</h3>
+                                <p class="other__description">Branding</p>
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+            </section>
+            <!-- OTHER PROJECTS SECTION END -->
+
+
+
+
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <!-- Text content in JS -->
+                <p class="footer__info"></p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="module" src="../src/main.ts"></script>
+</body>
+
+</html>

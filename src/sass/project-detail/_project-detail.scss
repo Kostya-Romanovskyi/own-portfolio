@@ -1,0 +1,130 @@
+@use '../all-utils' as *;
+
+.project__detail__title {
+  margin-top: 30px;
+  @extend %mainTitles;
+  margin-bottom: 0;
+}
+
+.project__detail__descr__wrapper {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  padding-top: 30px;
+}
+
+.project__detail__descr {
+  font-family: $rubik-font;
+  font-size: 0.625rem;
+  font-weight: $font-weight-medium;
+
+  color: $primary-grey-color;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 1rem;
+  }
+}
+
+.project__story {
+}
+
+.project__story__img__wrapper {
+  margin-bottom: 30px;
+}
+
+.project__story__img {
+  border-radius: 16px;
+}
+
+.story {
+}
+
+.story__wrapper {
+  & > p:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  margin: 0 auto;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    max-width: 550px;
+  }
+  @include getMediaScreenSize($breakpoints, desktop) {
+    max-width: 750px;
+  }
+}
+
+.story__container {
+}
+
+.story__title {
+  @extend %subtitles;
+}
+.story__description {
+  font-family: $rubik-font;
+  font-size: 1rem;
+  font-weight: $font-weight-regular;
+
+  color: $primary-grey-color;
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    font-size: 1.3rem;
+  }
+}
+
+//SECTION OTHER PROJECTS
+
+.other {
+}
+
+.other__title {
+  @extend %mainTitles;
+  text-align: center;
+}
+
+.other__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+}
+
+.other__item {
+  @media (max-width: 768px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    flex-basis: calc((100% - 30px * (3 - 1)) / 3);
+  }
+}
+
+.other__link {
+  color: $white-color;
+  text-decoration: none;
+}
+.other__img__wrapper {
+  margin-bottom: 20px;
+}
+.other__img {
+  border-radius: 16px;
+}
+.other__subtitle {
+  font-family: $rubik-font;
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+
+  margin-bottom: 10px;
+}
+.other__description {
+  font-family: $rubik-font;
+  font-size: 1.125rem;
+  color: $primary-grey-color;
+}

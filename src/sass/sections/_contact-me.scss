@@ -1,0 +1,157 @@
+@use '../all-utils' as *;
+
+.contact__me {
+  text-align: center;
+}
+
+.contact__me__title {
+  font-family: $syne-font;
+  font-size: 1.5rem;
+  font-weight: $font-weight-bold;
+
+  color: $orange-color;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 2.1875rem;
+  }
+  @include getMediaScreenSize($breakpoints, desktop) {
+    font-size: 2.8125rem;
+  }
+}
+
+.contact__me__email {
+  display: inline-flex;
+
+  font-family: $syne-font;
+
+  font-size: 1.1rem;
+  font-weight: $font-weight-bold;
+
+  margin-bottom: 50px;
+
+  color: $white-color;
+  text-decoration: none;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 2.5rem;
+  }
+  @include getMediaScreenSize($breakpoints, desktop) {
+    margin-bottom: 150px;
+    font-size: 4rem;
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+  }
+}
+
+.social {
+}
+.social__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.social__logo__link {
+  margin-bottom: 30px;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    margin-bottom: 0;
+  }
+}
+.social__logo__image {
+  width: 200px;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    width: 170px;
+  }
+}
+
+.social__relocate__link {
+  font-family: $syne-font;
+  font-size: 20px;
+  font-weight: $font-weight-bold;
+
+  color: $white-color;
+  text-decoration: none;
+
+  &:active,
+  &:focus {
+    color: $orange-color;
+  }
+
+  &:active .social__location__icon,
+  &:focus .social__location__icon {
+    fill: $white-color;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    &:hover .social__location,
+    &:focus .social__location {
+      color: $orange-color;
+    }
+
+    &:active .social__location {
+      color: $white-color;
+    }
+  }
+}
+.social__location__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 30px;
+
+  margin-bottom: 30px;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    margin-bottom: 0;
+  }
+}
+.social__location {
+}
+.social__location__icon {
+  width: 50px;
+  height: 50px;
+
+  fill: $orange-color;
+}
+.social__media__list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    gap: 0;
+  }
+}
+
+.social__media__item {
+}
+
+.social__media__link {
+  @include getMediaScreenSize($breakpoints, desktop) {
+    &:hover .social__media__icon,
+    &:focus .social__media__icon {
+      fill: $orange-color;
+    }
+  }
+}
+
+.social__media__icon {
+  width: 40px;
+  height: 24px;
+  fill: $social-media-color;
+  transition: fill $hover-time;
+}
+
+.social__media {
+}

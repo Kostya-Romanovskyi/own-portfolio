@@ -70,3 +70,20 @@
     font-size: 3.5rem;
   }
 }
+
+%subtitles {
+  font-family: $syne-font;
+  font-size: 1.5625rem;
+  font-weight: $font-weight-bold;
+
+  margin-bottom: 30px;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 2.1875rem;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    margin-bottom: 40px;
+    font-size: 3.5rem;
+  }
+}

@@ -1,0 +1,21 @@
+@use '../all-utils' as *;
+
+.footer {
+}
+.footer__info {
+  font-family: $syne-font;
+  font-size: 1rem;
+  font-weight: $font-weight-bold;
+
+  padding-block: 30px;
+  text-align: center;
+
+  border-top: 1px solid $white-color;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 1.25rem;
+  }
+  @include getMediaScreenSize($breakpoints, desktop) {
+    font-size: 1.5rem;
+  }
+}
