@@ -1,3 +1,5 @@
+import webStudioMainImg from '../../images/WebStudio/main.jpg';
+
 interface OtherProject {
   title: string;
   description: string;
@@ -31,7 +33,7 @@ export const projects: Project[] = [
     technologies: ['HTML', 'CSS', 'JavaScript', 'SCSS'],
     images: {
       main: {
-        image: '/src/images/WebStudio/main.jpg',
+        image: webStudioMainImg,
         alt: 'Web studio main image',
       },
       gallery: [
