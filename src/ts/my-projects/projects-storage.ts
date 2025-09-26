@@ -31,7 +31,7 @@ export const projects: Project[] = [
     technologies: ['HTML', 'CSS', 'JavaScript', 'SCSS'],
     images: {
       main: {
-        image: '../src/images/WebStudio/main.jpg',
+        image: '/src/images/WebStudio/main.jpg',
         alt: 'Web studio main image',
       },
       gallery: [
