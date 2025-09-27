@@ -1,0 +1,58 @@
+@use '../all-utils' as *;
+
+.skills {
+}
+.skills__flex {
+  @include getMediaScreenSize($breakpoints, tablet) {
+    display: flex;
+
+    gap: 30px;
+  }
+}
+.skills__wrapper {
+  @include getMediaScreenSize($breakpoints, tablet) {
+    flex-basis: calc(100% - 30px * (2 - 1) / 2);
+  }
+}
+.skills__subtitle {
+  @extend %mainTitles;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.skills__list {
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.057);
+  border-radius: 20px;
+  background-color: $white-alpha-skills-color;
+  padding: 30px;
+}
+
+.skills__list__indent {
+  @media (max-width: 768px) {
+    margin-bottom: 30px;
+  }
+}
+
+.skills__item {
+  border: 1px solid rgba(255, 255, 255, 0.057);
+  border-radius: 20px;
+  background-color: $white-alpha-skills-color;
+  padding-block: 10px;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 1.3rem;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    transition: box-shadow $hover-time;
+
+    &:hover {
+      box-shadow: 1px 1px 10px $orange-color;
+    }
+  }
+}

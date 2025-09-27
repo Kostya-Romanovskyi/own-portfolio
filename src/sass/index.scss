@@ -9,6 +9,14 @@
 @use './sections/footer';
 // Styles for home page END
 
+// Styles for about me page
+@use './about/about-general';
+@use './about/about-me';
+@use './about/decorate';
+@use './about/experience';
+@use './about/education';
+@use './about/skills';
+
 // Styles for my works page
 @use './works/works';
 

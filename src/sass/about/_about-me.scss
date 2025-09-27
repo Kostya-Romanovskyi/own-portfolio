@@ -1,0 +1,64 @@
+@use '../all-utils' as *;
+
+.about__me {
+}
+
+.about__me__flex {
+  @include getMediaScreenSize($breakpoints, tablet) {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    & > p {
+      flex-basis: calc((100% - 30px * (2 - 1) / 2));
+    }
+  }
+}
+
+.about__me__left {
+  font-family: $syne-font;
+  font-size: 1.25rem;
+  font-weight: $font-weight-bold;
+
+  margin-bottom: 30px;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    text-align: start;
+    font-size: 1.4375rem;
+    margin-bottom: 0;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    font-size: 2.5rem;
+  }
+}
+.decorate {
+  color: $orange-color;
+}
+.about__me__right {
+}
+
+.right__content {
+  color: $primary-grey-color;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    text-align: start;
+    font-size: 1.125rem;
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    font-size: 1.3125rem;
+
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+}

@@ -33,6 +33,10 @@
   }
 }
 
+.current {
+  text-shadow: 0 0px 35px $orange-color;
+}
+
 .header__mobile__wrapper {
   position: absolute;
   top: 100%;

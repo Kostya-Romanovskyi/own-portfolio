@@ -1,0 +1,25 @@
+@use '../all-utils' as *;
+
+.about__wrapper {
+  padding-bottom: 0;
+}
+
+.about__main__title {
+  @extend %mainTitles;
+  margin-bottom: 0;
+}
+
+.about__main__subtitle {
+  font-family: $rubik-font;
+  font-size: 0.625rem;
+  font-weight: $font-weight-medium;
+
+  margin-bottom: 0;
+  padding-bottom: 25px;
+
+  border-bottom: 1px solid $primary-grey-color;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 1rem;
+  }
+}

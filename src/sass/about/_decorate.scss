@@ -1,0 +1,40 @@
+@use '../all-utils' as *;
+
+.decorate {
+}
+
+.decorate__wrapper {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.decorate__icon {
+  flex-basis: calc((100% - 30px) / 2);
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    flex-basis: auto;
+    flex: 1;
+  }
+}
+
+.decorate__icon {
+  width: 60px;
+  height: 60px;
+  fill: $white-color;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    width: 70px;
+    height: 70px;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    width: 100px;
+    height: 100px;
+    transition: fill $hover-time;
+    &:hover {
+      fill: $orange-color;
+    }
+  }
+}
