@@ -1,16 +1,44 @@
 @use '../all-utils' as *;
 
-.project__detail__title {
+.project__detail__title__wrapper {
   margin-top: 30px;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.project__detail__title {
   @extend %mainTitles;
   margin-bottom: 0;
+}
+
+.project__detail__link {
+  color: $white-color;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 1.25rem;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    font-size: 1.5625rem;
+    transition: color $hover-time;
+
+    &:hover,
+    &:focus {
+      color: $orange-color;
+    }
+  }
 }
 
 .project__detail__descr__wrapper {
   display: flex;
   align-items: center;
-  column-gap: 10px;
+  gap: 10px;
   padding-top: 30px;
+  flex-wrap: wrap;
 }
 
 .project__detail__descr {
@@ -22,6 +50,14 @@
 
   @include getMediaScreenSize($breakpoints, tablet) {
     font-size: 1rem;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    transition: transform $hover-time, color $hover-time;
+    &:hover {
+      transform: translateY(-5px);
+      color: $orange-color;
+    }
   }
 }
 
@@ -72,6 +108,53 @@
   }
 }
 
+// section project web studio images
+.project__images__list {
+  @include getMediaScreenSize($breakpoints, tablet) {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+}
+
+.project__images__item {
+  border-radius: 13px;
+  overflow: hidden;
+
+  height: 400px;
+
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    max-width: 48%;
+    height: 500px;
+
+    flex-basis: calc((100% - 30px * (2 - 1) / 2));
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    height: 620px;
+    &:hover .project__images__img,
+    &:focus .project__images__img {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.project__images__img {
+  border-radius: 13px;
+  transition: transform $hover-time;
+
+  position: relative;
+  z-index: -1;
+}
+
 //SECTION OTHER PROJECTS
 
 .other {
@@ -89,6 +172,8 @@
 
   @include getMediaScreenSize($breakpoints, tablet) {
     flex-direction: row;
+    align-items: normal;
+
     flex-wrap: wrap;
     gap: 30px;
   }
@@ -104,6 +189,18 @@
   @include getMediaScreenSize($breakpoints, tablet) {
     flex-basis: calc((100% - 30px * (3 - 1)) / 3);
   }
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    &:hover .other__subtitle,
+    &:focus .other__subtitle {
+      color: $orange-color;
+    }
+
+    &:hover .other__img,
+    &:focus .other__img {
+      transform: translateY(-10px);
+    }
+  }
 }
 
 .other__link {
@@ -115,13 +212,37 @@
 }
 .other__img {
   border-radius: 16px;
+
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    height: 200px;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    height: 300px;
+  }
+
+  transition: transform $hover-time;
 }
+
 .other__subtitle {
   font-family: $rubik-font;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-weight: $font-weight-bold;
 
   margin-bottom: 10px;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 1.0625rem;
+  }
+  @include getMediaScreenSize($breakpoints, desktop) {
+    font-size: 1.25rem;
+    transition: color $hover-time, transform $hover-time;
+  }
 }
 .other__description {
   font-family: $rubik-font;

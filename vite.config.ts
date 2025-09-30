@@ -3,6 +3,9 @@ import { resolve } from 'path';
 
 export default defineConfig({
   base: '/own-portfolio/',
+  server: {
+    port: 5174,
+  },
   build: {
     rollupOptions: {
       input: {

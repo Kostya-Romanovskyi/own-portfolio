@@ -54,6 +54,11 @@
   color: $white-color;
 
   @include getMediaScreenSize($breakpoints, desktop) {
+    &:hover .works__item__title,
+    &:focus .works__item__title {
+      color: $white-hover-text-color;
+    }
+
     &:hover .works__image,
     &:focus .works__image {
       transform: scale(0.99);
@@ -86,6 +91,10 @@
   border-radius: 16px;
   margin-bottom: 15px;
 
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+
   transition: transform $hover-time;
 }
 
@@ -96,10 +105,14 @@
 
   margin-bottom: 15px;
 
+  color: $orange-color;
+
   text-transform: uppercase;
 }
 .works__item__title {
   font-family: $inter-font;
   font-size: 1.5rem;
   font-weight: $font-weight-bold;
+
+  transition: color $hover-time;
 }

@@ -8,10 +8,17 @@ const projectId = params.get('project');
 const project = projects.find(p => p.id === projectId);
 
 if (project) {
-  const title = document.querySelector('.project__detail__title');
-  if (title) {
-    title.textContent = project.title;
+  document.title = project.title;
+  // title with link
+  const titleWrapper = document.querySelector(
+    '.project__detail__title__wrapper'
+  );
+
+  if (titleWrapper) {
+    titleWrapper.innerHTML = `<h1 class="project__detail__title">${project.title}</h1> 
+    <a class="project__detail__link" href="${project.link.url}" target="_blank">${project.link.text}</a>`;
   }
+
   // technologies subtitle
   const techWrapper = document.querySelector(
     '.project__detail__descr__wrapper'
@@ -40,6 +47,20 @@ if (project) {
     .join('');
 
   if (storyWrapper) storyWrapper.innerHTML += storyTexts;
+
+  // more project images
+  const imagesWrapper = document.querySelector('.project__images__list');
+
+  if (imagesWrapper) {
+    imagesWrapper.innerHTML = project.images.gallery
+      .map(
+        image =>
+          `<li class="project__images__item">
+             <img class='project__images__img' src='${image.image}' alt='${image.alt}'>
+          </li>`
+      )
+      .join('');
+  }
 
   // Other projects
   const otherList = document.querySelector('.other__list');
