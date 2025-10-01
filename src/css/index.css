@@ -92,7 +92,7 @@ button {
   cursor: pointer;
 }
 
-.projects__link__button, .about__link, .hero__link {
+.certificates__explore__btn, .projects__link__button, .about__link, .hero__link {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -110,43 +110,43 @@ button {
   color: #ffffff;
   transition: background-color 300ms;
 }
-.projects__link__button:active, .about__link:active, .hero__link:active, .projects__link__button:focus, .about__link:focus, .hero__link:focus {
+.certificates__explore__btn:active, .projects__link__button:active, .about__link:active, .hero__link:active, .certificates__explore__btn:focus, .projects__link__button:focus, .about__link:focus, .hero__link:focus {
   background-color: transparent;
   border: 1px solid rgba(255, 255, 255, 0.4);
 }
 @media (min-width: 768px) {
-  .projects__link__button, .about__link, .hero__link {
+  .certificates__explore__btn, .projects__link__button, .about__link, .hero__link {
     min-width: 200px;
     padding-block: 24px;
     padding-inline: 37px;
   }
 }
 @media (min-width: 1150px) {
-  .projects__link__button, .about__link, .hero__link {
+  .certificates__explore__btn, .projects__link__button, .about__link, .hero__link {
     min-width: 242px;
     padding-block: 29px;
     padding-inline: 41px;
   }
-  .projects__link__button:hover, .about__link:hover, .hero__link:hover {
+  .certificates__explore__btn:hover, .projects__link__button:hover, .about__link:hover, .hero__link:hover {
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.4);
   }
 }
 
-.project__detail__title, .other__title, .works__title, .skills__subtitle, .education__title, .experience__title, .about__main__title, .certificates__title, .projects__title, .about__title {
+.certificate__title, .project__detail__title, .other__title, .works__title, .skills__subtitle, .education__title, .experience__title, .about__main__title, .certificates__title, .projects__title, .about__title {
   font-family: "Syne", sans-serif;
   font-size: 1.5625rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
 @media (min-width: 768px) {
-  .project__detail__title, .other__title, .works__title, .skills__subtitle, .education__title, .experience__title, .about__main__title, .certificates__title, .projects__title, .about__title {
+  .certificate__title, .project__detail__title, .other__title, .works__title, .skills__subtitle, .education__title, .experience__title, .about__main__title, .certificates__title, .projects__title, .about__title {
     margin-bottom: 30px;
     font-size: 2.1875rem;
   }
 }
 @media (min-width: 1150px) {
-  .project__detail__title, .other__title, .works__title, .skills__subtitle, .education__title, .experience__title, .about__main__title, .certificates__title, .projects__title, .about__title {
+  .certificate__title, .project__detail__title, .other__title, .works__title, .skills__subtitle, .education__title, .experience__title, .about__main__title, .certificates__title, .projects__title, .about__title {
     margin-bottom: 40px;
     font-size: 3.5rem;
   }
@@ -670,6 +670,9 @@ body {
   border-radius: 16px;
   margin-bottom: 20px;
   transition: transform 300ms;
+  -o-object-fit: cover;
+     object-fit: cover;
+  aspect-ratio: 1/1;
 }
 
 .projects__subtitle {
@@ -759,6 +762,30 @@ body {
   .certificates__icon {
     width: 90px;
     height: 90px;
+  }
+}
+
+.explore__btn__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificates__explore__btn {
+  margin-bottom: 30px;
+  border: 1px solid #ff9142;
+}
+@media (min-width: 768px) {
+  .certificates__explore__btn {
+    margin-bottom: 40px;
+  }
+}
+@media (min-width: 1150px) {
+  .certificates__explore__btn {
+    margin-bottom: 50px;
+  }
+  .certificates__explore__btn:hover {
+    background-color: #ff9142;
   }
 }
 
@@ -1627,4 +1654,97 @@ body {
   font-family: "Rubik", sans-serif;
   font-size: 1.125rem;
   color: #a8a8a8;
+}
+
+.certificate__title {
+  border-bottom: 2px solid #ff9142;
+}
+
+.certificate__list {
+  position: relative;
+  z-index: -1;
+}
+.certificate__list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background-color: #a8a8a8;
+}
+.certificate__list::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: -13px;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #a8a8a8;
+}
+
+.certificate__item {
+  position: relative;
+  z-index: -1;
+  padding-left: 40px;
+}
+.certificate__item:not(:last-child) {
+  margin-bottom: 50px;
+}
+.certificate__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 10%;
+  background-color: #a8a8a8;
+}
+.certificate__item::after {
+  content: "";
+  position: absolute;
+  top: -8px;
+  left: -7px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #a8a8a8;
+}
+@media (min-width: 480px) {
+  .certificate__item {
+    padding-left: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .certificate__item {
+    padding-left: 100px;
+  }
+}
+@media (min-width: 1150px) {
+  .certificate__item {
+    padding-left: 150px;
+  }
+}
+
+@media (min-width: 768px) {
+  .item__flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.certificate__name {
+  margin-bottom: 5px;
+}
+
+.certificate__description {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.certificate__date {
+  font-size: 12px;
+  margin-bottom: 20px;
 }/*# sourceMappingURL=index.css.map */

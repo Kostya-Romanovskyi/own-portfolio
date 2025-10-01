@@ -94,6 +94,9 @@
   border-radius: 16px;
   margin-bottom: 20px;
   transition: transform $hover-time;
+
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
 }
 
 .projects__subtitle {

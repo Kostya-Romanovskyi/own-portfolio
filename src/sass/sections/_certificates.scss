@@ -27,6 +27,32 @@
     height: 90px;
   }
 }
+
+.explore__btn__center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.certificates__explore__btn {
+  @extend %mainLinkButton;
+
+  margin-bottom: 30px;
+  border: 1px solid $orange-color;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    margin-bottom: 40px;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    margin-bottom: 50px;
+
+    &:hover {
+      background-color: $orange-color;
+    }
+  }
+}
+
 .certificates__list {
   display: flex;
   align-items: center;
