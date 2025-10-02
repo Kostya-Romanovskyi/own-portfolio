@@ -7,62 +7,13 @@
 }
 
 .experience__list {
-  // position: relative;
-  // z-index: -1;
-
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-
-  //   width: 2px;
-  //   height: 100%;
-
-  //   background-color: $primary-grey-color;
-  // }
-
-  // &::after {
-  //   content: '';
-  //   position: absolute;
-  //   bottom: 0;
-  //   left: -8px;
-
-  //   width: 20px;
-  //   height: 20px;
-
-  //   border-radius: 50%;
-
-  //   background-color: $primary-grey-color;
-  // }
 }
 .experience__item {
-  // position: relative;
-
-  // padding-left: 100px;
-
-  // &:not(:last-child) {
-  //   margin-bottom: 30px;
-  // }
-
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-
-  //   height: 2px;
-  //   width: 7%;
-
-  //   background-color: $primary-grey-color;
-  // }
-
-  // &::after {
-  //   content: '@';
-  //   position: absolute;
-  //   top: -14px;
-  //   left: -5px;
-  // }
+  &:not(:last-child) {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $primary-grey-color;
+  }
 }
 .experience__wrapper {
   @include getMediaScreenSize($breakpoints, tablet) {
@@ -82,6 +33,8 @@
   }
 }
 .experience__description {
+  color: $orange-color;
+
   @media (max-width: 768px) {
     margin-bottom: 10px;
   }
@@ -90,6 +43,12 @@
     font-size: 1.2rem;
   }
 }
+
+.experience__description--highlight {
+  color: $orange-color;
+  font-weight: $font-weight-light;
+}
+
 .experience__dates {
   @media (max-width: 768px) {
     margin-bottom: 10px;

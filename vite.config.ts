@@ -13,6 +13,7 @@ export default defineConfig({
         works: resolve(__dirname, 'works.html'),
         about: resolve(__dirname, 'about.html'),
         projectDetail: resolve(__dirname, 'my-projects/project-detail.html'),
+        certificates: resolve(__dirname, 'certificates.html'),
       },
     },
   },
