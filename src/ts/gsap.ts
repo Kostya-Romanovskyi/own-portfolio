@@ -5,11 +5,6 @@ gsap.registerPlugin(ScrollTrigger);
 
 const sections = document.querySelectorAll<HTMLElement>('.section');
 
-console.log(sections);
-sections.forEach(section => {
-  console.log(section);
-});
-
 sections.forEach(section => {
   gsap.from(section, {
     opacity: 0,
