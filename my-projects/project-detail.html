@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- favicon -->
+    <link rel="icon" type="image/svg+xml" href="/own-portfolio/assets/favicon-DEXcajQQ.svg">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,700&family=Outfit&family=Rubik:wght@400..900&family=Syne:wght@700&display=swap"
+        rel="stylesheet">
+
+    <!-- styles -->
+
+    <title>project details</title>
+  <script type="module" crossorigin src="/own-portfolio/assets/main-DJRPrflc.js"></script>
+  <link rel="stylesheet" crossorigin href="/own-portfolio/assets/main-B8WjScXf.css">
+</head>
+
+<body>
+    <div class="wrapper">
+
+        <header class="header">
+            <div class="container">
+                <div class="header__desktop__wrapper">
+                    <!-- logo -->
+                    <div class="header__logo">
+                        <a href="/own-portfolio/">
+                            <img src="/own-portfolio/assets/logo-eI-UKiif.webp" alt="Logo">
+                        </a>
+                    </div>
+                    <!-- navigation block -->
+
+                    <div class="header__mobile__wrapper">
+                        <nav class="header__nav">
+                            <!-- nav list -->
+                            <ul class="header__nav__list">
+                                <li class="header__nav__item">
+                                    <a href="/own-portfolio/" class="header__nav__link">home</a>
+                                </li>
+                                <li class="header__nav__item">
+                                    <a href="/own-portfolio/about.html" class="header__nav__link">
+                                        about me
+                                    </a>
+                                </li>
+                                <li class="header__nav__item">
+                                    <a href="/own-portfolio/works.html" class="header__nav__link">my works</a>
+                                </li>
+                                <li class="header__nav__item">
+                                    <a href="/own-portfolio/certificates.html"
+                                        class="header__nav__link">certificates</a>
+                                </li>
+                            </ul>
+                        </nav>
+
+                        <div class="header__contacts">
+                            <button class="header__contacts__button" type="button">
+                                contacts
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- burger btn (open menu) -->
+                    <button type="button" class="header__burger__btn">
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main">
+
+            <div class="container">
+                <!-- Title and link render -->
+                <div class="project__detail__title__wrapper"></div>
+
+                <!-- Subtitle list of technologies render -->
+                <div class="project__detail__descr__wrapper"></div>
+            </div>
+
+            <!-- PROJECT STORY SECTION -->
+            <section class="section project__story">
+                <div class="container">
+                    <!-- Main image render -->
+                    <div class="project__story__img__wrapper"></div>
+
+                    <div class="story story__wrapper">
+                        <!-- Render paragraphs about project story -->
+                        <h2 class="story__title">Project Story</h2>
+                    </div>
+                </div>
+            </section>
+            <!-- PROJECT STORY SECTION END-->
+
+            <!-- More project images render-->
+            <section class="section">
+                <h2 class="visually-hidden">More project images</h2>
+                <div class="container">
+                    <ul class="project__images__list"></ul>
+                </div>
+            </section>
+            <!-- More project images end -->
+
+            <!-- OTHER PROJECTS SECTION -->
+            <section class="section other">
+                <div class="container">
+                    <h2 class="other__title">Other projects</h2>
+                    <!-- render other projects list -->
+                    <ul class="other__list"></ul>
+                </div>
+            </section>
+            <!-- OTHER PROJECTS SECTION END -->
+        </main>
+
+        <footer class="footer">
+            <div class="container">
+                <!-- Text content in JS -->
+                <p class="footer__info"></p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-backdrop="container">
+        <div class="modal" id="modal">
+            <h2 class="modal__title" id="modal-title">My Contacts</h2>
+            <!-- <p id="modal-desc">Enter your email and password to log in</p> -->
+            <a class="modal__link" href="mailto:romanovskiyk97@gmail.com">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-envelop'></use>
+                </svg>
+                romanovskiyk97@gmail.com</a>
+            <a class="modal__link" href="tel:+16047254154">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-phone'></use>
+                </svg>
+                +1-(604)-725-4154</a>
+            <a class="modal__link" href="https://github.com/Kostya-Romanovskyi">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-github'></use>
+                </svg>
+                My Github</a>
+            <a class="modal__link" href="https://www.linkedin.com/in/kostiantyn-romanovskyi/">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-linkedin'></use>
+                </svg>
+                My Linkedin</a>
+            <button class="modal__close" type="button" data-backdrop="button"></button>
+        </div>
+    </div>
+
+</body>
+
+</html>
