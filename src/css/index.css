@@ -482,6 +482,27 @@ body {
   }
 }
 
+.hero__title {
+  font-family: "Syne", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  padding-bottom: 40px;
+  color: #ffffff;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 3rem;
+    padding-bottom: 75px;
+  }
+}
+@media (min-width: 1150px) {
+  .hero__title {
+    font-size: 4.5rem;
+    padding-bottom: 100px;
+  }
+}
+
 .hero__link {
   background-color: #ff9142;
 }
