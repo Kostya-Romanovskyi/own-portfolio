@@ -1,7 +1,7 @@
 @use './all-utils' as *;
 
 html {
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 body {
@@ -10,7 +10,7 @@ body {
   color: $white-color;
   background-color: $bg-color;
 
-  overflow-x: hidden;
+  // overflow-x: hidden;
   // scroll-behavior: smooth;
 }
 
