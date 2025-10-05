@@ -17,6 +17,7 @@
 
   <!-- styles -->
   <link rel="stylesheet" href="./src/css/index.min.css">
+  <!-- <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> -->
 
   <title>ownPortfolio</title>
 </head>
@@ -101,9 +102,8 @@
                 closer
               </h2>
               <p class="about__subtitle">
-                Aaronn is a New York-based visual designer focusing on
-                branding and visual identity. Her portfolio showcases her wide
-                range of work, spanning books, posters and web design.
+                I’m a Front-End Developer passionate about creating clean, responsive, and user-friendly web interfaces.
+                I enjoy turning ideas into functional and visually appealing websites.
               </p>
 
               <a href="/own-portfolio/about.html" class="about__link">Discover More About Me</a>
@@ -299,7 +299,8 @@
 
             <ul class="social__media__list">
               <li class="social__media__item">
-                <a class="social__media__link" href="https://www.facebook.com/" target="_blank" aria-label="Facebook">
+                <a class="social__media__link" href="https://www.facebook.com/kostya.romanovskiy.2025" target="_blank"
+                  aria-label="Facebook">
                   <svg class='social__media__icon'>
                     <use href='./src/images/sprite.svg#icon-facebook'></use>
                   </svg>
@@ -335,7 +336,37 @@
     </footer>
   </div>
 
+  <!-- Modal window -->
+  <div class="backdrop is-hidden" data-backdrop="container">
+    <div class="modal" id="modal">
+      <h2 class="modal__title" id="modal-title">My Contacts</h2>
+      <!-- <p id="modal-desc">Enter your email and password to log in</p> -->
+      <a class="modal__link" href="mailto:romanovskiyk97@gmail.com">
+        <svg class='modal__link__icon'>
+          <use href='./src/images/sprite.svg#icon-envelop'></use>
+        </svg>
+        romanovskiyk97@gmail.com</a>
+      <a class="modal__link" href="tel:+16047254154">
+        <svg class='modal__link__icon'>
+          <use href='./src/images/sprite.svg#icon-phone'></use>
+        </svg>
+        +1-(604)-725-4154</a>
+      <a class="modal__link" href="https://github.com/Kostya-Romanovskyi">
+        <svg class='modal__link__icon'>
+          <use href='./src/images/sprite.svg#icon-github'></use>
+        </svg>
+        My Github</a>
+      <a class="modal__link" href="https://www.linkedin.com/in/kostiantyn-romanovskyi/">
+        <svg class='modal__link__icon'>
+          <use href='./src/images/sprite.svg#icon-linkedin'></use>
+        </svg>
+        My Linkedin</a>
+      <button class="modal__close" type="button" data-backdrop="button"></button>
+    </div>
+  </div>
+
   <script type="module" src="./src/main.ts"></script>
+  <!-- <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> -->
 </body>
 
 </html>

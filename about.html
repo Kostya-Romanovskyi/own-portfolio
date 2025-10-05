@@ -174,12 +174,12 @@
                         <div class="skills__wrapper">
                             <h2 class="skills__subtitle">Soft skills</h2>
                             <ul class="skills__list skills__list__indent">
-                                <li class="skills__item">Attention to detail</li>
-                                <li class="skills__item">Team Collaboration</li>
-                                <li class="skills__item">Problem-solving</li>
-                                <li class="skills__item">Adaptability</li>
-                                <li class="skills__item">Curiosity & willingness to learn</li>
-                                <li class="skills__item">Responsibility</li>
+                                <li class="skills__item--soft">Attention to detail</li>
+                                <li class="skills__item--soft">Team Collaboration</li>
+                                <li class="skills__item--soft">Problem-solving</li>
+                                <li class="skills__item--soft">Adaptability</li>
+                                <li class="skills__item--soft">Curiosity & willingness to learn</li>
+                                <li class="skills__item--soft">Responsibility</li>
                             </ul>
                         </div>
 
@@ -326,6 +326,35 @@
             </div>
         </footer>
         <!-- FOOTER END-->
+    </div>
+
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-backdrop="container">
+        <div class="modal" id="modal">
+            <h2 class="modal__title" id="modal-title">My Contacts</h2>
+            <!-- <p id="modal-desc">Enter your email and password to log in</p> -->
+            <a class="modal__link" href="mailto:romanovskiyk97@gmail.com">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-envelop'></use>
+                </svg>
+                romanovskiyk97@gmail.com</a>
+            <a class="modal__link" href="tel:+16047254154">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-phone'></use>
+                </svg>
+                +1-(604)-725-4154</a>
+            <a class="modal__link" href="https://github.com/Kostya-Romanovskyi">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-github'></use>
+                </svg>
+                My Github</a>
+            <a class="modal__link" href="https://www.linkedin.com/in/kostiantyn-romanovskyi/">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-linkedin'></use>
+                </svg>
+                My Linkedin</a>
+            <button class="modal__close" type="button" data-backdrop="button"></button>
+        </div>
     </div>
 
     <script src="./src/main.ts" type="module"></script>

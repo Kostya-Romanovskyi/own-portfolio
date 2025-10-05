@@ -1,0 +1,159 @@
+@use '../all-utils' as *;
+
+.backdrop {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  //   background-color: $white-alpha-color;
+  backdrop-filter: blur(10px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  visibility: visible;
+
+  transition: opacity $hover-time, transform $hover-time;
+  opacity: 1;
+
+  &.is-hidden .modal {
+    transform: scale(0.5);
+  }
+
+  &.modal {
+    transform: scale(1.5);
+  }
+}
+
+.is-hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  transition: transform $hover-time;
+
+  width: 500px;
+  margin-inline: 15px;
+  padding: 10px;
+  border: 1px solid $orange-color;
+
+  background-color: $bg-color;
+
+  @include getMediaScreenSize($breakpoints, mobile) {
+    padding: 20px;
+  }
+}
+
+.modal__title {
+  @extend %mainTitles;
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    font-size: 2.1875rem;
+  }
+}
+
+.modal__link {
+  display: flex;
+
+  column-gap: 20px;
+
+  color: $white-color;
+  transition: color $hover-time;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &:active,
+  &:focus {
+    color: $orange-color;
+  }
+
+  @include getMediaScreenSize($breakpoints, mobile) {
+    font-size: 1.25rem;
+
+    margin-left: 60px;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    &:hover,
+    &:focus {
+      color: $orange-color;
+    }
+
+    &:hover .modal__link__icon,
+    &:focus .modal__link__icon {
+      transform: translateY(-5px);
+    }
+  }
+}
+
+.modal__link__icon {
+  width: 30px;
+  height: 30px;
+
+  fill: $orange-color;
+  stroke: $orange-color;
+
+  transition: transform $hover-time;
+
+  @include getMediaScreenSize($breakpoints, mobile) {
+    width: 40px;
+    height: 40px;
+  }
+}
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
+  width: 20px;
+  height: 20px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $white-color;
+    transform: translateY(-50%) rotate(45deg);
+    transition: background-color $hover-time;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 50%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: $white-color;
+    transform: translateY(50%) rotate(-45deg);
+    transition: background-color $hover-time;
+  }
+
+  &:focus::before,
+  &:focus::after,
+  &:active::before,
+  &:active::after {
+    background-color: $orange-color;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    &:hover::before,
+    &:hover:after,
+    &:focus::before,
+    &:focus::after {
+      background-color: $orange-color;
+    }
+  }
+}

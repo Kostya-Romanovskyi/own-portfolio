@@ -122,6 +122,35 @@
         </footer>
     </div>
 
+    <!-- Modal window -->
+    <div class="backdrop is-hidden" data-backdrop="container">
+        <div class="modal" id="modal">
+            <h2 class="modal__title" id="modal-title">My Contacts</h2>
+            <!-- <p id="modal-desc">Enter your email and password to log in</p> -->
+            <a class="modal__link" href="mailto:romanovskiyk97@gmail.com">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-envelop'></use>
+                </svg>
+                romanovskiyk97@gmail.com</a>
+            <a class="modal__link" href="tel:+16047254154">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-phone'></use>
+                </svg>
+                +1-(604)-725-4154</a>
+            <a class="modal__link" href="https://github.com/Kostya-Romanovskyi">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-github'></use>
+                </svg>
+                My Github</a>
+            <a class="modal__link" href="https://www.linkedin.com/in/kostiantyn-romanovskyi/">
+                <svg class='modal__link__icon'>
+                    <use href='./src/images/sprite.svg#icon-linkedin'></use>
+                </svg>
+                My Linkedin</a>
+            <button class="modal__close" type="button" data-backdrop="button"></button>
+        </div>
+    </div>
+
     <script type="module" src="../src/main.ts"></script>
 </body>
 

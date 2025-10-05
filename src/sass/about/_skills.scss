@@ -56,3 +56,27 @@
     }
   }
 }
+
+.skills__item--soft {
+  border: 1px solid rgba(255, 255, 255, 0.057);
+  border-radius: 20px;
+  background-color: $white-alpha-skills-color;
+  padding-block: 10px;
+  width: 100%;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 1.3rem;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    transition: box-shadow $hover-time;
+
+    &:hover {
+      box-shadow: 1px 1px 10px $orange-color;
+    }
+  }
+}

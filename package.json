@@ -9,9 +9,13 @@
     "preview": "vite preview"
   },
   "devDependencies": {
+    "@types/aos": "^3.0.7",
     "@types/node": "^24.5.2",
     "sass": "^1.91.0",
     "typescript": "~5.8.3",
     "vite": "^7.1.2"
+  },
+  "dependencies": {
+    "gsap": "^3.13.0"
   }
 }
