@@ -461,7 +461,7 @@ body {
   text-align: center;
 }
 
-.hero__title {
+.section.hero h1 {
   font-family: "Syne", sans-serif;
   font-size: 2rem;
   font-weight: 700;
@@ -470,13 +470,13 @@ body {
   text-align: center;
 }
 @media (min-width: 768px) {
-  .hero__title {
+  .section.hero h1 {
     font-size: 3rem;
     padding-bottom: 75px;
   }
 }
 @media (min-width: 1150px) {
-  .hero__title {
+  .section.hero h1 {
     font-size: 4.5rem;
     padding-bottom: 100px;
   }
