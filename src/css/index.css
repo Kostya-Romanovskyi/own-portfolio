@@ -469,6 +469,18 @@ body {
   color: #ffffff;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .hero__title {
+    font-size: 3rem;
+    padding-top: 50px;
+  }
+}
+@media (min-width: 1150px) {
+  .hero__title {
+    font-size: 4.5rem;
+    padding-top: 80px;
+  }
+}
 
 .hero__link {
   background-color: #ff9142;

@@ -12,6 +12,16 @@
 
   color: $white-color;
   text-align: center;
+
+  @include getMediaScreenSize($breakpoints, tablet) {
+    font-size: 3rem;
+    padding-top: 50px;
+  }
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    font-size: 4.5rem;
+    padding-top: 80px;
+  }
 }
 
 .hero__link {
