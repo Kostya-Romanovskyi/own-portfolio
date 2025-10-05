@@ -2,7 +2,13 @@
 
 .certificate__title {
   @extend %mainTitles;
+  margin-top: 10px;
+  margin-bottom: 0;
+  padding-bottom: 10px;
   border-bottom: 2px solid $orange-color;
+  @include getMediaScreenSize($breakpoints, desktop) {
+    margin-top: 40px;
+  }
 }
 
 .certificate__list {

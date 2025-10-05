@@ -6,7 +6,12 @@
 
 .about__main__title {
   @extend %mainTitles;
+  margin-top: 10px;
   margin-bottom: 0;
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    margin-top: 40px;
+  }
 }
 
 .about__main__subtitle {

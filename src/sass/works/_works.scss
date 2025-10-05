@@ -4,7 +4,12 @@
 }
 .works__title {
   @extend %mainTitles;
+  margin-top: 10px;
   margin-bottom: 0;
+
+  @include getMediaScreenSize($breakpoints, desktop) {
+    margin-top: 40px;
+  }
 }
 
 .works__subtitle {
@@ -13,8 +18,9 @@
   font-weight: $font-weight-medium;
 
   color: $primary-grey-color;
+  border-bottom: 1px solid $primary-grey-color;
 
-  margin-bottom: 25px;
+  padding-bottom: 25px;
 
   @include getMediaScreenSize($breakpoints, tablet) {
     font-size: 1rem;
@@ -22,9 +28,6 @@
 }
 
 .works__list {
-  border-top: 1px solid $primary-grey-color;
-  padding-block: 50px;
-
   @include getMediaScreenSize($breakpoints, tablet) {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
