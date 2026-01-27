@@ -170,10 +170,15 @@ button {
   }
 }
 
+html {
+  overflow-x: clip;
+}
+
 body {
   font-family: "Rubik", sans-serif;
   color: #ffffff;
   background-color: #1a1a1a;
+  overflow-x: clip;
 }
 
 .container {

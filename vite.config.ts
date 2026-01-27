@@ -14,6 +14,7 @@ export default defineConfig({
         about: resolve(__dirname, 'about.html'),
         projectDetail: resolve(__dirname, 'my-projects/project-detail.html'),
         certificates: resolve(__dirname, 'certificates.html'),
+        api: resolve(__dirname, 'API.html'),
       },
     },
   },
